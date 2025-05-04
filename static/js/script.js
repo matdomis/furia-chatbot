@@ -21,6 +21,9 @@ document.querySelector('#sendButton').addEventListener('click', async function (
     const data = await response.json();
     if (response.ok) {
         document.querySelector('#chatMessages').insertAdjacentHTML('beforeend', data.html);
+
+        const chatMessages = document.querySelector('#chatMessages');
+        chatMessages.scrollTop = chatMessages.scrollHeight;
     } else {
         console.log(data.error);
         document.querySelector('#chatMessages').insertAdjacentHTML('beforeend', data.error);
