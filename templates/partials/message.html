@@ -1,0 +1,8 @@
+<div>
+    <img src="{{ url_for('static', filename='img/furia-logo.png')}}" alt="Furia Logo" class="bot-logo">
+    {% if aux_text %}
+        <p class="bot-message">{{ aux_text }}<br><br>{{ bot_message }}</p>
+    {% else %}
+        <p class="bot-message">{{ bot_message }}</p>
+    {% endif %}
+</div>

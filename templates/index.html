@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}{% endblock %}
+{% block content %}
+    <main>
+        <div class="cover">
+            <img src="{{ url_for('static', filename='img/fallenzao-cover.jpg') }}" alt="fallenzao-cover">
+            <img src="{{ url_for('static', filename='img/kscerato-cover.jpg') }}" alt="furia-cover">
+        </div>
+
+        <div class="card chat-card">
+            <div class="chat-header">
+                <img src="{{ url_for('static', filename='img/furia-logo.png') }}" alt="Furia logo">
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div>
+                    <img src="{{ url_for('static', filename='img/furia-logo.png')}}" alt="Furia Logo" class="bot-logo">
+                    <p class="bot-message">Fala, Furioso! Bem-vindo(a) ao protótipo de ChatBot da Furia!<br><br>Desenvolvido por @matdomis 😁</p>
+                </div>
+                <div>
+                    <img src="{{ url_for('static', filename='img/furia-logo.png')}}" alt="Furia Logo" class="bot-logo">
+                    <p class="bot-message">Escreva um dos comandos abaixo para pegar informações:<br><br>🔥 /proximo → Quando e contra quem é o próximo jogo<br>🗓️ /ultimas → Ver os dados e resultados das últimas partidas<br>🤘 /lineup → Escalação atual da FURIA<br>📢 /grito → Gera aleatoriamente um grito popular da torcida furiosa!</p>
+                </div>
+                
+                <!-- Mensagens aparecerão aqui -->
+            </div>
+            <div class="chat-input">
+                <form method='POST' action="{{ url_for('index') }}" id="chatForm">
+                    <input type="text" id="chatInput" placeholder="Digite sua mensagem...">
+                    <input type="submit" value="▶" id="sendButton">
+                </form>
+            </div>
+        </div>
+        
+    </main>
+
+{% endblock %}
