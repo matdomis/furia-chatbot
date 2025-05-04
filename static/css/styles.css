@@ -167,6 +167,25 @@ form#chatForm {
     color: black
 }
 
+.chat-messages::-webkit-scrollbar {
+    width: 8px; /* Largura do scrollbar */
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background: #1e1e1e; /* Cor do fundo do track */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background: rgb(167, 162, 162); /* Cor do thumb */
+    border-radius: 10px; /* Bordas arredondadas */
+    border: 2px solid #1e1e1e; /* Espaço entre o thumb e o track */
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+    background: #0056b3; /* Cor do thumb ao passar o mouse */
+}
+
 /* ------ RESPONSIVIDADE ------*/
 
 @media (max-width: 1280px) {
